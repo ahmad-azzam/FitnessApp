@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Sueb",
+        "email": "sueb@mail.com",
+        "gender": "Male",
+        "member": "Preminum"
+    },
+    {
+        "name": "Hana",
+        "email": "hana@mail.com",
+        "gender": "Female",
+        "member": "Gold"
+    },
+    {
+        "name": "Gondrong",
+        "email": "gondrong@mail.com",
+        "gender": "Male",
+        "member": "Silver"
+    }
+]

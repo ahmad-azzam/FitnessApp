@@ -1,0 +1,42 @@
+<%- include('../templates/header.ejs', {title: 'Add Member' }) %>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Add Members</h1>
+                        <a class="btn btn-primary mb-4" href="/members">Show All Member</a>
+                        <form action="/members/add" method="POST">
+                            <div class="form-outline mb-4">
+                                <input type="text" id="name" name="name" class="form-control" />
+                                <label class="form-label" for="name">Name</label>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <input type="text" id="email" name="email" class="form-control" />
+                                <label class="form-label" for="email">Email</label>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <select id="gender" name="gender" class="form-select"
+                                    aria-label="Default select example">
+                                    <option selected disabled>--- Select Your Gender ---</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <select id="member" name="member" class="form-select"
+                                    aria-label="Default select example">
+                                    <option selected disabled>--- Select Your Type of Membership ---</option>
+                                    <option value="Platinum">Platinum</option>
+                                    <option value="Gold">Gold</option>
+                                    <option value="Silver">Silver</option>
+                                </select>
+                            </div>
+                            <input type="submit" class="btn btn-primary btn-block mb-4">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('../templates/footer.ejs') %>

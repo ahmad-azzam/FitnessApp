@@ -1,0 +1,47 @@
+<%- include('../templates/header.ejs', {title: 'Edit Member' }) %>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Edit Member</h1>
+                        <a class="btn btn-primary mb-4" href="/members">Show All Member</a>
+                        <form action="/members/<%= data.id %>/edit" method="POST">
+                            <div class="form-outline mb-4">
+                                <input type="text" id="name" name="name" value="<%= data.name %>"
+                                    class="form-control" />
+                                <label class="form-label" for="name">Name</label>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <input type="text" id="email" name="email" value="<%= data.email %>"
+                                    class="form-control" />
+                                <label class="form-label" for="email">Email</label>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="gender">Gender</label>
+                                <select id="gender" name="gender" class="form-select"
+                                    aria-label="Default select example">
+                                    <option value="Male" <%=data.gender==='Male' ? "selected" : "" %> >Male</option>
+                                    <option value="Female" <%=data.gender==='Female' ? "selected" : "" %>>Female
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="member">Member</label>
+                                <select id="member" name="member" class="form-select"
+                                    aria-label="Default select example">
+                                    <option value="Platinum" <%=data.member==='Platinum' ? "selected" : "" %>>Platinum
+                                    </option>
+                                    <option value="Gold" <%=data.member==='Gold' ? "selected" : "" %>>Gold</option>
+                                    <option value="Silver" <%=data.member==='Silver' ? "selected" : "" %>>Silver
+                                    </option>
+                                </select>
+                            </div>
+                            <input type="submit" class="btn btn-primary btn-block mb-4">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('../templates/footer.ejs') %>
